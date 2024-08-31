@@ -43,8 +43,7 @@ async function init(router) {
     router.post('/uploadFile', async (req, res) => {
         try {
             const parsedBody = await parseRequestBody(req);
-            const [filepath, userhash] = [parsedBody.filepath, parsedBody.userhash];
-            console.log(parsedBody);
+            const [filepath, userhash] = [parsedBody.filepath, parsedBody.userhash];        
             // No userhash means Anonymous upload
             const catbox = userhash ? new Catbox(userhash) : new Catbox();
 
