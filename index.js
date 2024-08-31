@@ -44,7 +44,9 @@ async function init(router) {
         try {
             const parsedBody = await parseRequestBody(req);
             const [filepath, userhash] = [parsedBody.filepath, parsedBody.userhash];
-            const catbox = new Catbox(userhash);
+            console.log(parsedBody);
+            // No userhash means Anonymous upload
+            const catbox = userhash ? new Catbox(userhash) : new Catbox();
 
             // console.log("Filepath received: ", filepath);
 
