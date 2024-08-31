@@ -9,6 +9,4 @@ Clone the repository in the `SillyTavern/plugins/` directory.
 ```
 cd plugins
 git clone https://github.com/RedIceCider/SillyLogs-Catbox
-cd SillyLogs-Catbox
-npm i
 ```
